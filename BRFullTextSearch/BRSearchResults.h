@@ -60,6 +60,17 @@ typedef void (^BRSearchServiceSearchResultsIterator)(NSUInteger index, id <BRSea
 - (NSArray *)resultsGroupedByField:(NSString *)fieldName;
 
 /**
+ * Group all matches by a given field.
+ *
+ * The results are assumed to be ordered appropriately for the grouping operation to
+ * make sense. The resulting dictionary will contain `NSArray` objects for each group, whose
+ * values will be `id<BRSearchResult>` objects.
+ *
+ * @param fieldName the field name by which to group the results, fieldName also will be dictionary key
+ */
+- (NSDictionary *)resultsGroupedByFieldDictionary:(NSString *)fieldName;
+
+/**
  * Group all matches by a timestamp field, at day precision.
  *
  * The results are assumed to be ordered by date. The grouping keys will be created by

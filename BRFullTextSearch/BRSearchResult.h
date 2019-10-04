@@ -35,6 +35,34 @@
 - (id)valueForField:(NSString *)fieldName;
 
 /**
+ * Get kBRSearchFieldNameTranslationID field value
+ *
+ * @return the value of the translationId field, or `nil` if no value is available
+ */
+- (id)translationID;
+
+/**
+ * Get kBRSearchFieldNameValue field value
+ *
+ * @return the value of the translationId field, or `nil` if no value is available
+ */
+- (id)searchValue;
+
+/**
+ * Get kBRSearchFieldNameSermonID field value
+ *
+ * @return the value of the translationId field, or `nil` if no value is available
+ */
+- (id)sermonID;
+
+/**
+ * Get kBRSearchFieldNameTitle field value
+ *
+ * @return the value of the translationId field, or `nil` if no value is available
+ */
+- (id)sermonTitle;
+
+/**
  * Get the date components, in local time, for a timestamp field.
  *
  * @param fieldName the name of a field whose value is a timestamp

@@ -10,18 +10,21 @@
 
 NSString * const kBRSearchFieldNameIdentifier = @"id";
 NSString * const kBRSearchFieldNameObjectType = @"o";
+NSString * const kBRSearchFieldNameSermonID = @"d";
 NSString * const kBRSearchFieldNameTitle = @"t";
 NSString * const kBRSearchFieldNameValue = @"v";
+NSString * const kBRSearchFieldNameTranslationID = @"y";
+NSString * const kBRSearchFieldNameSeries = @"z";
 NSString * const kBRSearchFieldNameTimestamp = @"s";
 
 NSString * StringForBRSearchObjectType(BRSearchObjectType type) {
-	const char data[] = {type, '\0'};
-	return [NSString stringWithCString:data encoding:NSASCIIStringEncoding];
+    const char data[] = {type, '\0'};
+    return [NSString stringWithCString:data encoding:NSASCIIStringEncoding];
 }
 
 BRSearchObjectType BRSearchObjectTypeForString(NSString * string) {
-	if ( [string length] < 1 ) {
-		return '\0';
-	}
-	return [string cStringUsingEncoding:NSASCIIStringEncoding][0];
+    if ( [string length] < 1 ) {
+        return '\0';
+    }
+    return [string cStringUsingEncoding:NSASCIIStringEncoding][0];
 }
