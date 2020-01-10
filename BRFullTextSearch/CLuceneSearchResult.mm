@@ -72,6 +72,22 @@ using namespace lucene::search;
 	return nil;
 }
 
+- (id)translationID {
+    return [self valueForField:kBRSearchFieldNameTranslationID];
+}
+
+- (id)searchValue {
+    return [self valueForField:kBRSearchFieldNameValue];
+}
+
+- (id)sermonID {
+    return [self valueForField:kBRSearchFieldNameSermonID];
+}
+
+- (id)sermonTitle {
+    return [self valueForField:kBRSearchFieldNameTitle];
+}
+
 - (id)valueForField:(NSString *)fieldName {
 	const Document &doc = hits->doc(index);
 	const Document::FieldsType *fields = doc.getFields();
